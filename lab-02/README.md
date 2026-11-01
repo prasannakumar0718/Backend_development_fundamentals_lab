@@ -65,9 +65,9 @@ Follow these steps to deploy Lab 02 to Render:
 6. **Deploy:** Click **Create Web Service**. Wait 1–2 minutes for the build to finish.
 7. **Verify Public URL:** Once the service status turns to `Live`, copy the assigned URL (e.g., `https://backend-development-fundamentals-lab-02.onrender.com`).
 8. **Test Live Endpoints:**
-   - Root Health: `GET https://[YOUR_RENDER_URL]/` → returns `"Book Store API is running."`
-   - All Books: `GET https://[YOUR_RENDER_URL]/books/` → returns array of 10 books.
-   - Single Book: `GET https://[YOUR_RENDER_URL]/books/1/` → returns book 1.
+   - Root Health: `GET https://backend-development-fundamentals-lab-02-2oy3.onrender.com/` → returns `"Book Store API is running."`
+   - All Books: `GET https://backend-development-fundamentals-lab-02-2oy3.onrender.com/books/` → returns array of 10 books.
+   - Single Book: `GET https://backend-development-fundamentals-lab-02-2oy3.onrender.com/books/1/` → returns book 1.
 
 ---
 

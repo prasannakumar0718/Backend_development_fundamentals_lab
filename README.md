@@ -17,8 +17,8 @@ Comprehensive laboratory experiments, implementations, and documentation for the
 
 | Lab | Title | Description | Technologies | Report Link |
 | :---: | :--- | :--- | :--- | :---: |
-| **Lab 01** | **Node.js and Express Server** | Introduction to backend servers using Node.js built-in `http` module and Express.js routing, status codes, and error handling. | Node.js, Express.js | [View Lab 01](./lab-01/) |
-| **Lab 02** | **SQLite Database & CRUD Routes** | Relational database modeling, SQL DDL/DML, and RESTful CRUD API endpoints with parameterized queries using SQLite. | Node.js, Express.js, SQLite, sqlite3 | [View Lab 02](./lab-02/) |
+| **Lab 01** | **Node.js and Express Server** | Introduction to backend servers using Node.js built-in `http` module and Express.js routing, status codes, and error handling. | Node.js, Express.js | [View Lab 01](./lab-01/) • [Repo](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab_01) • [Live Demo](https://backend-development-fundamentals-lab-01-kt6t.onrender.com) |
+| **Lab 02** | **SQLite Database & CRUD Routes** | Relational database modeling, SQL DDL/DML, and RESTful CRUD API endpoints with parameterized queries using SQLite. | Node.js, Express.js, SQLite, sqlite3 | [View Lab 02](./lab-02/) • [Repo](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab_02) • [Live Demo](https://backend-development-fundamentals-lab-02-2oy3.onrender.com) |
 
 ---
 

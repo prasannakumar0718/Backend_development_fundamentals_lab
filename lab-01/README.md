@@ -155,4 +155,7 @@ The screenshots below verify the endpoints running in the browser:
 ---
 
 ## Deployment Link
-- **Deployment URL:** `[YOUR_DEPLOYMENT_URL]` *(Leave as placeholder or update with live link e.g., Render/Railway/Vercel once deployed)*
+- **Platform:** [Render](https://render.com/) (Web Service)
+- **Live URL:** [https://backend-development-fundamentals-lab-01-kt6t.onrender.com](https://backend-development-fundamentals-lab-01-kt6t.onrender.com)
+- **Status:** Verified Live (HTTP 200 OK)
+- **Standalone Repository:** [prasannakumar0718/Backend_development_fundamentals_lab_01](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab_01)
