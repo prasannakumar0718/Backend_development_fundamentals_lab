@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# NPM debug logs
+npm-debug.log*
+
+# NOTE: books.db is intentionally tracked for lab submission

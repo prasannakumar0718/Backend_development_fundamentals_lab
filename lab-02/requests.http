@@ -1,0 +1,46 @@
+### =========================================================================
+### Lab 02: REST Client Requests (VS Code REST Client / IntelliJ HTTP Client)
+### Base URL: http://localhost:3000
+###
+### Unified Workflow: GET All -> GET 1 -> POST 11 -> PUT 11 -> DELETE 11
+### =========================================================================
+
+### 1. GET all books (Expected: 200 OK)
+GET http://localhost:3000/books/
+
+### 2. GET single book by ID (Expected: 200 OK)
+GET http://localhost:3000/books/1/
+
+### 3. POST - Add new book (Expected: 201 Created -> returns bookId: 11)
+POST http://localhost:3000/books/
+Content-Type: application/json
+
+{
+  "title": "The Pragmatic Programmer",
+  "author": "Andrew Hunt & David Thomas",
+  "price": 550,
+  "pages": 352
+}
+
+### 4. PUT - Update the newly added book ID 11 (Expected: 200 OK)
+PUT http://localhost:3000/books/11/
+Content-Type: application/json
+
+{
+  "title": "The Pragmatic Programmer (20th Anniversary Edition)",
+  "author": "David Thomas & Andrew Hunt",
+  "price": 600,
+  "pages": 360
+}
+
+### 5. DELETE - Remove the newly added book ID 11 (Expected: 200 OK)
+DELETE http://localhost:3000/books/11/
+
+### 6. GET Nonexistent Book (Expected: 404 Not Found)
+GET http://localhost:3000/books/999/
+
+### 7. GET Invalid ID format (Expected: 400 Bad Request)
+GET http://localhost:3000/books/abc/
+
+### 8. DELETE Nonexistent Book (Expected: 404 Not Found)
+DELETE http://localhost:3000/books/999/

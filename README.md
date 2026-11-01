@@ -6,7 +6,7 @@ Comprehensive laboratory experiments, implementations, and documentation for the
 
 ## Student Information
 
-- **Student Name:** [YOUR_NAME]
+- **Student Name:** Myadaboina Prasanna Kumar
 - **Registration Number:** [YOUR_REGISTRATION_NUMBER]
 - **Branch / Section:** [YOUR_SECTION]
 - **GitHub Repository:** [Backend_development_fundamentals_lab](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab)
@@ -18,6 +18,7 @@ Comprehensive laboratory experiments, implementations, and documentation for the
 | Lab | Title | Description | Technologies | Report Link |
 | :---: | :--- | :--- | :--- | :---: |
 | **Lab 01** | **Node.js and Express Server** | Introduction to backend servers using Node.js built-in `http` module and Express.js routing, status codes, and error handling. | Node.js, Express.js | [View Lab 01](./lab-01/) |
+| **Lab 02** | **SQLite Database & CRUD Routes** | Relational database modeling, SQL DDL/DML, and RESTful CRUD API endpoints with parameterized queries using SQLite. | Node.js, Express.js, SQLite, sqlite3 | [View Lab 02](./lab-02/) |
 
 ---
 
@@ -27,25 +28,45 @@ Comprehensive laboratory experiments, implementations, and documentation for the
 Backend_development_fundamentals_lab/
 ├── .gitignore
 ├── README.md
-└── lab-01/
+├── lab-01/
+│   ├── .gitignore
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│   ├── server-http.js         # Built-in Node http server
+│   ├── server.js              # Express application server
+│   └── screenshots/           # Endpoint response screenshots
+│       ├── home.png
+│       ├── about.png
+│       ├── time.png
+│       └── unknown.png
+└── lab-02/
     ├── .gitignore
     ├── package.json
     ├── package-lock.json
     ├── README.md
-    ├── server-http.js         # Built-in Node http server
-    ├── server.js              # Express application server
-    └── screenshots/           # Endpoint response screenshots
-        ├── home.png
-        ├── about.png
-        ├── time.png
-        └── unknown.png
+    ├── init.sql               # SQLite table schema & 10 seed books
+    ├── seed.js                # Database seed script
+    ├── server.js              # Express server with CRUD API & initializeDBAndServer()
+    ├── books.db               # SQLite database file
+    ├── postman_collection.json# Postman test collection
+    ├── requests.http          # REST client query file
+    ├── test-api.js            # Automated endpoint testing script
+    └── screenshots/           # CRUD API and database screenshots
+        ├── get-all-books.png
+        ├── get-single-book.png
+        ├── post-book.png
+        ├── put-book.png
+        ├── delete-book.png
+        ├── error-not-found.png
+        └── database-records.png
 ```
 
 ---
 
 ## General Setup & Installation
 
-Each lab experiment is self-contained within its respective directory. To set up and run Lab 01:
+Each lab experiment is self-contained within its respective directory. To set up and run any lab:
 
 1. **Clone the repository:**
    ```bash
@@ -55,7 +76,7 @@ Each lab experiment is self-contained within its respective directory. To set up
 
 2. **Navigate into the desired lab directory:**
    ```bash
-   cd lab-01
+   cd lab-01   # or cd lab-02
    ```
 
 3. **Install dependencies:**
@@ -64,13 +85,15 @@ Each lab experiment is self-contained within its respective directory. To set up
    ```
 
 4. **Run the server:**
-   - **For Express server:**
+   - **For Lab 01:**
      ```bash
-     npm start
+     npm start           # Express server
+     npm run start:http  # Native HTTP server
      ```
-   - **For native HTTP server:**
+   - **For Lab 02:**
      ```bash
-     npm run start:http
+     npm run dev         # Development mode with nodemon
+     # or: npm start     # Standard node execution
      ```
 
-Refer to the individual `README.md` file in the `lab-01/` directory for full experiment details, API endpoint specifications, and screenshots.
+Refer to the individual `README.md` file in each lab directory for full experiment details, API endpoint specifications, and screenshots.

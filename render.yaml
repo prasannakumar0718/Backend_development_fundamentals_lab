@@ -1,0 +1,15 @@
+# Render Blueprint Configuration for Lab 02
+# Service Type: Web Service (Node.js)
+# Note: Render Free plan uses ephemeral disk storage. SQLite state will reset upon redeploy or sleep.
+
+services:
+  - type: web
+    name: backend-development-fundamentals-lab-02
+    runtime: node
+    plan: free
+    rootDir: lab-02
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production

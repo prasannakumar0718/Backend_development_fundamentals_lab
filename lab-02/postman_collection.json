@@ -1,0 +1,147 @@
+{
+  "info": {
+    "name": "Lab 02 - SQLite & Express Bookstore API",
+    "description": "Postman Collection for Lab 02: SQLite Database and CRUD Routes. Follows a unified workflow: GET All -> GET Single (ID 1) -> POST New (ID 11) -> PUT Update (ID 11) -> DELETE (ID 11) -> 404 / 400 Error Cases.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. GET All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ""]
+        },
+        "description": "Retrieves all 10 initial books from SQLite database. Expected Status: 200 OK."
+      }
+    },
+    {
+      "name": "2. GET Single Book by ID (Existing ID 1)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/1/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "1", ""]
+        },
+        "description": "Retrieves details of existing book with ID 1 (Atomic Habits). Expected Status: 200 OK."
+      }
+    },
+    {
+      "name": "3. POST Create Book (Returns ID 11)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"The Pragmatic Programmer\",\n  \"author\": \"Andrew Hunt & David Thomas\",\n  \"price\": 550,\n  \"pages\": 352\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", ""]
+        },
+        "description": "Inserts a new book into the database. Returns lastID (ID 11). Expected Status: 201 Created."
+      }
+    },
+    {
+      "name": "4. PUT Update Book (ID 11)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"The Pragmatic Programmer (20th Anniversary Edition)\",\n  \"author\": \"David Thomas & Andrew Hunt\",\n  \"price\": 600,\n  \"pages\": 360\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/11/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "11", ""]
+        },
+        "description": "Updates the details of the newly inserted book (ID 11). Expected Status: 200 OK."
+      }
+    },
+    {
+      "name": "5. DELETE Book by ID (ID 11)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/11/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "11", ""]
+        },
+        "description": "Deletes the book with ID 11 from the database. Expected Status: 200 OK."
+      }
+    },
+    {
+      "name": "6. GET Nonexistent Book (404 Not Found)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/999/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "999", ""]
+        },
+        "description": "Queries nonexistent ID 999 to verify 404 Not Found error handling. Expected Status: 404 Not Found."
+      }
+    },
+    {
+      "name": "7. GET Invalid Book ID (400 Bad Request)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/abc/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "abc", ""]
+        },
+        "description": "Queries non-numeric ID 'abc' to verify 400 Bad Request validation. Expected Status: 400 Bad Request."
+      }
+    },
+    {
+      "name": "8. DELETE Nonexistent Book (404 Not Found)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/999/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["books", "999", ""]
+        },
+        "description": "Attempts to delete nonexistent ID 999. Expected Status: 404 Not Found."
+      }
+    }
+  ]
+}
