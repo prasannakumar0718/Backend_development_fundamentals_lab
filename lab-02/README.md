@@ -2,16 +2,17 @@
 
 ## Student Information
 - **Student Name:** Myadaboina Prasanna Kumar
-- **Registration Number:** [YOUR_REGISTRATION_NUMBER]
-- **Section:** [YOUR_SECTION]
+- **Registration Number:** 252U1R9103
+- **Section:** GENAI-2B
 
 ---
 
 ## Deployment Information & Render Guide
 
 - **Platform:** [Render](https://render.com/) (Web Service)
-- **Live Deployment URL:** `[YOUR_RENDER_URL]` *(Update with your live URL once deployed, e.g. `https://backend-development-fundamentals-lab-02.onrender.com`)*
-- **Current Deployment Status:** `PREPARED (PENDING DASHBOARD SETUP)`
+- **Live Deployment URL:** [https://backend-development-fundamentals-lab-02-2oy3.onrender.com](https://backend-development-fundamentals-lab-02-2oy3.onrender.com)
+- **Current Deployment Status:** `LIVE & VERIFIED` (HTTP 200 OK across all CRUD endpoints)
+- **GitHub Repository:** [prasannakumar0718/Backend_development_fundamentals_lab_02](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab_02)
 
 ### Render Dashboard Recommended Settings
 

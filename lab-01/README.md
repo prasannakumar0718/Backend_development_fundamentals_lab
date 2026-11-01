@@ -1,9 +1,9 @@
 # Lab 01: Node.js and Express Server
 
 ## Student Information
-- **Name:** [YOUR_NAME]
-- **Registration Number:** [YOUR_REGISTRATION_NUMBER]
-- **Section:** [YOUR_SECTION]
+- **Name:** Myadaboina Prasanna Kumar
+- **Registration Number:** 252U1R9103
+- **Section:** GENAI-2B
 
 ---
 
@@ -36,7 +36,7 @@ The `package.json` file serves as the manifest for the Node.js project. Here is 
 | `main` | The primary entry point file of the application (`server.js`). |
 | `scripts` | Dictionary of command-line scripts. Running `npm start` executes `node server.js`, while `npm run start:http` executes `node server-http.js`. |
 | `keywords` | An array of keywords that describe the project, helping in categorization. |
-| `author` | The person who created and maintains the project (`[YOUR_NAME]`). |
+| `author` | The person who created and maintains the project (`Myadaboina Prasanna Kumar`). |
 | `license` | The legal license governing code usage and distribution (`ISC`). |
 | `type` | Defines the module system (`commonjs`), which enables `require()` and `module.exports` syntax. |
 | `dependencies` | Lists external packages required in production (`express`), along with their allowed semantic versions (`^5.3.0`). |
@@ -93,7 +93,7 @@ npm run start:http
 | HTTP Method | Endpoint | Description | Expected Status Code | Response Format | Sample Output |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `GET` | `/` | Home route displaying welcome greeting | `200 OK` | `text/html` / Plain Text | `Welcome to my Node.js server!` |
-| `GET` | `/about` | Returns student details | `200 OK` | `application/json` | `{"name": "[YOUR_NAME]", "section": "[YOUR_SECTION]"}` |
+| `GET` | `/about` | Returns student details | `200 OK` | `application/json` | `{"name": "Myadaboina Prasanna Kumar", "registrationNumber": "252U1R9103", "section": "GENAI-2B"}` |
 | `GET` | `/time` | Returns the current server date and time | `200 OK` | Plain Text | `Sun Nov 01 2026 20:36:15 GMT+0530 ...` |
 | `GET` | `/*` (Any unknown route) | Catch-all handler for undefined paths | `404 Not Found` | Plain Text | `404 - Page not found` |
 

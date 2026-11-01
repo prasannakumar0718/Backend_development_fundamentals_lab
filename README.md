@@ -7,8 +7,8 @@ Comprehensive laboratory experiments, implementations, and documentation for the
 ## Student Information
 
 - **Student Name:** Myadaboina Prasanna Kumar
-- **Registration Number:** [YOUR_REGISTRATION_NUMBER]
-- **Branch / Section:** [YOUR_SECTION]
+- **Registration Number:** 252U1R9103
+- **Branch / Section:** GENAI-2B
 - **GitHub Repository:** [Backend_development_fundamentals_lab](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab)
 
 ---

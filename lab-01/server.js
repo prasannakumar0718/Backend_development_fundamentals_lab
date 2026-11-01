@@ -27,8 +27,9 @@ app.get('/', (req, res) => {
 // Note: Placeholders are provided below - update with your actual details
 app.get('/about', (req, res) => {
   res.status(200).json({
-    name: '[YOUR_NAME]',
-    section: '[YOUR_SECTION]'
+    name: 'Myadaboina Prasanna Kumar',
+    registrationNumber: '252U1R9103',
+    section: 'GENAI-2B'
   });
 });
 
