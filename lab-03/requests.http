@@ -1,0 +1,118 @@
+### Lab 03 requests (VS Code REST Client). Run in order on a fresh database.
+@baseUrl = http://localhost:3000
+
+### 1. Health check (expected 200)
+GET {{baseUrl}}/
+
+### 2. List books (defaults) (expected 200)
+GET {{baseUrl}}/books
+
+### 3. Search by title (search_q=the) (expected 200)
+GET {{baseUrl}}/books?search_q=the
+
+### 4. Sort by price DESC, limit 3 (expected 200)
+GET {{baseUrl}}/books?order_by=price&order=DESC&limit=3
+
+### 5. Pagination (limit=3&offset=3) (expected 200)
+GET {{baseUrl}}/books?limit=3&offset=3
+
+### 6. Price range (min_price=300&max_price=420) (expected 200)
+GET {{baseUrl}}/books?min_price=300&max_price=420
+
+### 7. Max price only (max_price=300) (expected 200)
+GET {{baseUrl}}/books?max_price=300&order_by=price
+
+### 8. Get one book (expected 200)
+GET {{baseUrl}}/books/1
+
+### 9. Create book (expected 201)
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "title": "The Pragmatic Programmer",
+  "author": "Andrew Hunt",
+  "price": 550,
+  "pages": 352
+}
+
+### 10. Update book (expected 200)
+PUT {{baseUrl}}/books/11
+Content-Type: application/json
+
+{
+  "price": 600
+}
+
+### 11. Check update (expected 200)
+GET {{baseUrl}}/books/11
+
+### 12. Delete book (expected 200)
+DELETE {{baseUrl}}/books/11
+
+### 13. Get missing book (expected 404)
+GET {{baseUrl}}/books/999
+
+### 14. Get with non-numeric id (expected 400)
+GET {{baseUrl}}/books/abc
+
+### 15. Invalid order_by (expected 400)
+GET {{baseUrl}}/books?order_by=password
+
+### 16. Invalid order (expected 400)
+GET {{baseUrl}}/books?order=UP
+
+### 17. Invalid limit (expected 400)
+GET {{baseUrl}}/books?limit=abc
+
+### 18. min_price greater than max_price (expected 400)
+GET {{baseUrl}}/books?min_price=500&max_price=100
+
+### 19. Create without title (expected 400)
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "author": "Someone",
+  "price": 100,
+  "pages": 50
+}
+
+### 20. Create with non-numeric price (expected 400)
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "title": "Bad Price",
+  "author": "Someone",
+  "price": "abc",
+  "pages": 50
+}
+
+### 21. Create with invalid JSON (expected 400)
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{"title": "oops",
+
+### 22. Update missing book (expected 404)
+PUT {{baseUrl}}/books/999
+Content-Type: application/json
+
+{
+  "price": 100
+}
+
+### 23. Update with non-numeric price (expected 400)
+PUT {{baseUrl}}/books/1
+Content-Type: application/json
+
+{
+  "price": "free"
+}
+
+### 24. Delete already deleted book (expected 404)
+DELETE {{baseUrl}}/books/11
+
+### 25. Unknown route (expected 404)
+GET {{baseUrl}}/authors
