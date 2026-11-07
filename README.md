@@ -19,6 +19,7 @@ Comprehensive laboratory experiments, implementations, and documentation for the
 | :---: | :--- | :--- | :--- | :---: |
 | **Lab 01** | **Node.js and Express Server** | Introduction to backend servers using Node.js built-in `http` module and Express.js routing, status codes, and error handling. | Node.js, Express.js | [View Lab 01](./lab-01/) • [Repo](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab_01) • [Live Demo](https://backend-development-fundamentals-lab-01-kt6t.onrender.com) |
 | **Lab 02** | **SQLite Database & CRUD Routes** | Relational database modeling, SQL DDL/DML, and RESTful CRUD API endpoints with parameterized queries using SQLite. | Node.js, Express.js, SQLite, sqlite3 | [View Lab 02](./lab-02/) • [Repo](https://github.com/prasannakumar0718/Backend_development_fundamentals_lab_02) • [Live Demo](https://backend-development-fundamentals-lab-02-2oy3.onrender.com) |
+| **Lab 03** | **REST API, Query Parameters, Validation & Debugging** | Search, sort, pagination and price filters on `GET /books`, request validation, consistent status codes and `{ message }` errors, plus a debugging exercise (EADDRINUSE, import path, table typo, missing await). | Node.js, Express.js, SQLite | [View Lab 03](./lab-03/) |
 
 ---
 
@@ -60,6 +61,17 @@ Backend_development_fundamentals_lab/
         ├── delete-book.png
         ├── error-not-found.png
         └── database-records.png
+└── lab-03/
+    ├── .gitignore
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    ├── server.js              # REST API with search/sort/filter + validation
+    ├── test-api.js            # 25 success and failure test cases
+    ├── postman_collection.json# Postman test list
+    ├── requests.http          # REST client requests
+    ├── debugging/             # Broken project + fixes for the debugging exercise
+    └── screenshots/           # One response screenshot per test case
 ```
 
 ---
@@ -76,7 +88,7 @@ Each lab experiment is self-contained within its respective directory. To set up
 
 2. **Navigate into the desired lab directory:**
    ```bash
-   cd lab-01   # or cd lab-02
+   cd lab-01   # or lab-02, lab-03
    ```
 
 3. **Install dependencies:**
@@ -90,7 +102,7 @@ Each lab experiment is self-contained within its respective directory. To set up
      npm start           # Express server
      npm run start:http  # Native HTTP server
      ```
-   - **For Lab 02:**
+   - **For Lab 02 / Lab 03:**
      ```bash
      npm run dev         # Development mode with nodemon
      # or: npm start     # Standard node execution
